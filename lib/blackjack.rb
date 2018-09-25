@@ -54,12 +54,16 @@ end
 #####################################################
 
 def runner
-  total = 0
+  card_total = 0
   welcome
-  until total > 21
-  initial_round
-  hit?
-  total += hit?
+  card_total += initial_round
+  until card_total > 21
+  card_total += hit?(number)
+  display_card_total
+end
+end_game
+
+
   
 end
     
